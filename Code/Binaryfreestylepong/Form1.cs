@@ -18,8 +18,8 @@ namespace Binaryfreestylepong
         }
 
         
-        private int ballspeed = 5, goingright = 1, goingdown = 1, PlayerOneScoreOnGo = 1,PlayerTwoScoreOnGo = 1, caseX = 0, caseY = 0;
-        private Boolean GoingRightPlayer1, GoingUpPlayer1, GoingLeftPlayer1, GoingDownPlayer1, GoingRightPlayer2, GoingUpPlayer2, GoingLeftPlayer2, GoingDownPlayer2, Scoring, turnOne, turnTwo;
+        private int ballspeed = 5, goingright = 1, goingdown = 1, PlayerOneScoreOnGo = 1,PlayerTwoScoreOnGo = 1, caseX = 0, caseY = 0, streak1 = 1, streak2 = 1;
+        private Boolean GoingRightPlayer1, GoingUpPlayer1, GoingLeftPlayer1, GoingDownPlayer1, GoingRightPlayer2, GoingUpPlayer2, GoingLeftPlayer2, GoingDownPlayer2, Scoring, turnOne, turnTwo, reverseRotateOne, reverseRotateTwo;
         
         private void ballTimer_Tick(object sender, EventArgs e)
         {
@@ -43,48 +43,64 @@ namespace Binaryfreestylepong
                     case 1:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 2:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 3:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 4:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
@@ -109,48 +125,64 @@ namespace Binaryfreestylepong
                     case 1:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 2:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 3:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 4:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
@@ -175,48 +207,64 @@ namespace Binaryfreestylepong
                     case 1:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 2:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 3:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 4:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
@@ -241,48 +289,64 @@ namespace Binaryfreestylepong
                     case 1:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 1 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 1 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 2:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 2 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 2 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 3:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 4 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 4 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
                     case 4:
                         if (Scoring == true)
                         {
-                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8;
+                            PlayerOneScoreOnGo = PlayerOneScoreOnGo + 8 * streak1;
+                            streak1 = streak1 + 2;
+                            streak2 = 1;
                             score1.Text = PlayerOneScoreOnGo.ToString();
                         }
                         else
                         {
-                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8;
+                            PlayerTwoScoreOnGo = PlayerTwoScoreOnGo + 8 * streak2;
+                            streak2 = streak2 + 1;
+                            streak1 = 1;
                             score2.Text = PlayerTwoScoreOnGo.ToString();
                         }
                         break;
@@ -290,7 +354,10 @@ namespace Binaryfreestylepong
             }
             if (ball.Bounds.IntersectsWith(playerOne.Bounds))
             {
-                goingdown = goingdown * -1;
+                if (reverseRotateOne)
+                    goingright = goingright * -1;
+                else
+                    goingdown = goingdown * -1;
                 ball.Image = (Binaryfreestylepong.Properties.Resources.ballWhite);
                 ball.Location = new Point(ball.Location.X + ballspeed * goingright, ball.Location.Y + ballspeed * goingdown);
                 if (ball.Bounds.IntersectsWith(playerOne.Bounds))
@@ -299,10 +366,14 @@ namespace Binaryfreestylepong
                     goingright = goingright * -1;
                 }
                 Scoring = true;
+
             }
             if (ball.Bounds.IntersectsWith(playerTwo.Bounds))
             {
-                goingright = goingright * -1;
+                if (reverseRotateTwo)
+                    goingdown = goingdown * -1;
+                else
+                    goingright = goingright * -1;
                 ball.Image = (Binaryfreestylepong.Properties.Resources.ballBlack);
                 ball.Location = new Point(ball.Location.X + ballspeed * goingright, ball.Location.Y + ballspeed * goingdown);
                 if (ball.Bounds.IntersectsWith(playerTwo.Bounds))
@@ -317,40 +388,53 @@ namespace Binaryfreestylepong
         private void playertimer_Tick(object sender, EventArgs e)
         {
             if (GoingUpPlayer1)
-                if (playerOne.Bounds.IntersectsWith(topWall.Bounds)) ;
-                else playerOne.Location = new Point(playerOne.Location.X, playerOne.Location.Y - 2);
+                if (playerOne.Bounds.IntersectsWith(topWall.Bounds) == false)
+                playerOne.Location = new Point(playerOne.Location.X, playerOne.Location.Y - 2);
            if (GoingRightPlayer1)
-               if (playerOne.Bounds.IntersectsWith(rightWall.Bounds)) ;
-               else playerOne.Location = new Point(playerOne.Location.X + 2, playerOne.Location.Y);
+               if (playerOne.Bounds.IntersectsWith(rightWall.Bounds) == false)
+               playerOne.Location = new Point(playerOne.Location.X + 2, playerOne.Location.Y);
            if (GoingDownPlayer1)
-               if (playerOne.Bounds.IntersectsWith(bottomWall.Bounds)) ;
-               else playerOne.Location = new Point(playerOne.Location.X, playerOne.Location.Y + 2);
+               if (playerOne.Bounds.IntersectsWith(bottomWall.Bounds) == false)
+               playerOne.Location = new Point(playerOne.Location.X, playerOne.Location.Y + 2);
            if (GoingLeftPlayer1)
-               if (playerOne.Bounds.IntersectsWith(leftWall.Bounds)) ;
-               else playerOne.Location = new Point(playerOne.Location.X - 2, playerOne.Location.Y);
+               if (playerOne.Bounds.IntersectsWith(leftWall.Bounds) == false)
+               playerOne.Location = new Point(playerOne.Location.X - 2, playerOne.Location.Y);
 
            if (turnOne)
+           {
                playerOne.Size = new Size(20, 116);
+               reverseRotateOne = true;
+           }
            else
+           {
                playerOne.Size = new Size(116, 20);
-          
+               reverseRotateOne = false;
+           }
+
            if (GoingUpPlayer2)
-               if (playerTwo.Bounds.IntersectsWith(topWall.Bounds)) ;
-               else playerTwo.Location = new Point(playerTwo.Location.X, playerTwo.Location.Y - 2);
+               if (playerTwo.Bounds.IntersectsWith(topWall.Bounds)== false)
+               playerTwo.Location = new Point(playerTwo.Location.X, playerTwo.Location.Y - 2);
            if (GoingRightPlayer2)
-               if (playerTwo.Bounds.IntersectsWith(rightWall.Bounds)) ;
-               else playerTwo.Location = new Point(playerTwo.Location.X + 2, playerTwo.Location.Y);
+               if (playerTwo.Bounds.IntersectsWith(rightWall.Bounds) == false)
+               playerTwo.Location = new Point(playerTwo.Location.X + 2, playerTwo.Location.Y);
            if (GoingDownPlayer2)
-               if (playerTwo.Bounds.IntersectsWith(bottomWall.Bounds)) ;
-               else playerTwo.Location = new Point(playerTwo.Location.X, playerTwo.Location.Y + 2);
+               if (playerTwo.Bounds.IntersectsWith(bottomWall.Bounds) == false)
+               playerTwo.Location = new Point(playerTwo.Location.X, playerTwo.Location.Y + 2);
            if (GoingLeftPlayer2)
-               if (playerTwo.Bounds.IntersectsWith(leftWall.Bounds)) ;
-               else playerTwo.Location = new Point(playerTwo.Location.X - 2, playerTwo.Location.Y);
+               if (playerTwo.Bounds.IntersectsWith(leftWall.Bounds) == false)
+               playerTwo.Location = new Point(playerTwo.Location.X - 2, playerTwo.Location.Y);
 
            if (turnTwo)
+           {
                playerTwo.Size = new Size(20, 116);
+               reverseRotateTwo = false;
+           }
            else
+           {
                playerTwo.Size = new Size(116, 20);
+               reverseRotateTwo = true;
+
+           }
         }
 
         private void Form1_KeyDown_1(object sender, KeyEventArgs e)

@@ -182,7 +182,7 @@
             this.Controls.Add(this.playerTwo);
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Binaryfreestylepong";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_1);
             ((System.ComponentModel.ISupportInitialize)(this.topWall)).EndInit();
