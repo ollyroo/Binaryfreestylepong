@@ -123,4 +123,7 @@
   <metadata name="playertimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>119, 17</value>
   </metadata>
+  <data name="introBox.Text" xml:space="preserve">
+    <value>Welcome to Binary freestyle pong, a take on the origional pong but with more divensions. Player one is white and is controlled with the wasd keys and space to rotate. Player to uses the arrows and enter to rotate.</value>
+  </data>
 </root>

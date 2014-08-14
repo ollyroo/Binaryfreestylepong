@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ballTimer = new System.Windows.Forms.Timer(this.components);
             this.playertimer = new System.Windows.Forms.Timer(this.components);
             this.Player2score = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.ball = new System.Windows.Forms.PictureBox();
             this.playerOne = new System.Windows.Forms.PictureBox();
             this.playerTwo = new System.Windows.Forms.PictureBox();
+            this.introBox = new System.Windows.Forms.RichTextBox();
+            this.StartButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.topWall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomWall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightWall)).BeginInit();
@@ -53,13 +56,11 @@
             // 
             // ballTimer
             // 
-            this.ballTimer.Enabled = true;
             this.ballTimer.Interval = 1;
             this.ballTimer.Tick += new System.EventHandler(this.ballTimer_Tick);
             // 
             // playertimer
             // 
-            this.playertimer.Enabled = true;
             this.playertimer.Interval = 2;
             this.playertimer.Tick += new System.EventHandler(this.playertimer_Tick);
             // 
@@ -164,11 +165,34 @@
             this.playerTwo.TabIndex = 0;
             this.playerTwo.TabStop = false;
             // 
+            // introBox
+            // 
+            this.introBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.introBox.Location = new System.Drawing.Point(487, 41);
+            this.introBox.Name = "introBox";
+            this.introBox.ReadOnly = true;
+            this.introBox.Size = new System.Drawing.Size(223, 73);
+            this.introBox.TabIndex = 11;
+            this.introBox.Text = resources.GetString("introBox.Text");
+            // 
+            // StartButton
+            // 
+            this.StartButton.Location = new System.Drawing.Point(487, 344);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(223, 64);
+            this.StartButton.TabIndex = 12;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 420);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(734, 420);
+            this.Controls.Add(this.StartButton);
+            this.Controls.Add(this.introBox);
             this.Controls.Add(this.score1);
             this.Controls.Add(this.Player1score);
             this.Controls.Add(this.score2);
@@ -212,6 +236,8 @@
         private System.Windows.Forms.Label score2;
         private System.Windows.Forms.Label score1;
         private System.Windows.Forms.Label Player1score;
+        private System.Windows.Forms.RichTextBox introBox;
+        private System.Windows.Forms.Button StartButton;
     }
 }
 

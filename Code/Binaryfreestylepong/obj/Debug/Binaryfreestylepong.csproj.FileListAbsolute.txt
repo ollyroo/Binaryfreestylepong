@@ -16,3 +16,12 @@ H:\My Documents\Visual Studio 2012\Projects\Binaryfreestylepong\Binaryfreestylep
 H:\My Documents\Visual Studio 2012\Projects\Binaryfreestylepong\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.Form1.resources
 H:\My Documents\Visual Studio 2012\Projects\Binaryfreestylepong\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.Properties.Resources.resources
 H:\My Documents\Visual Studio 2012\Projects\Binaryfreestylepong\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.csproj.GenerateResource.Cache
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\bin\Debug\Binaryfreestylepong.exe.config
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.exe
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.pdb
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\bin\Debug\Binaryfreestylepong.exe
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\bin\Debug\Binaryfreestylepong.pdb
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.csprojResolveAssemblyReference.cache
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.Form1.resources
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.Properties.Resources.resources
+C:\Users\ollyroo\Documents\Binaryfreestylepong\Code\Binaryfreestylepong\obj\Debug\Binaryfreestylepong.csproj.GenerateResource.Cache

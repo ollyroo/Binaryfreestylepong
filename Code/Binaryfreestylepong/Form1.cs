@@ -16,18 +16,19 @@ namespace Binaryfreestylepong
         {
             InitializeComponent();
         }
-
-        
+        //some startup stuff
         private int ballspeed = 5, goingright = 1, goingdown = 1, PlayerOneScoreOnGo = 1,PlayerTwoScoreOnGo = 1, caseX = 0, caseY = 0, streak1 = 1, streak2 = 1;
         private Boolean GoingRightPlayer1, GoingUpPlayer1, GoingLeftPlayer1, GoingDownPlayer1, GoingRightPlayer2, GoingUpPlayer2, GoingLeftPlayer2, GoingDownPlayer2, Scoring, turnOne, turnTwo, reverseRotateOne, reverseRotateTwo;
-        
+        //all variable asignment
         private void ballTimer_Tick(object sender, EventArgs e)
         {
 
             ball.Location = new Point(ball.Location.X + ballspeed*goingright, ball.Location.Y + ballspeed*goingdown);
+            //main ball movement
             if (ball.Bounds.IntersectsWith(rightWall.Bounds))
             {
                 goingright = goingright * -1;
+                //detects if hit right wall
                 caseY = 0;
 
                 if (ball.Location.Y <= 132 || ball.Location.Y >= 328)
@@ -38,6 +39,7 @@ namespace Binaryfreestylepong
                     caseY = 3;
                 else if (ball.Location.Y <= 244)
                     caseY = 4;
+                //case statement for scoring
                 switch (caseY)
                 {
                     case 1:
@@ -110,6 +112,7 @@ namespace Binaryfreestylepong
             if (ball.Bounds.IntersectsWith(bottomWall.Bounds))
             {
                 goingdown = goingdown * -1;
+                //detects if hit bottom wall
                 caseX = 0;
 
                 if (ball.Location.X <= 132 || ball.Location.X >= 328)
@@ -120,6 +123,7 @@ namespace Binaryfreestylepong
                     caseX = 3;
                 else if (ball.Location.X <= 244)
                     caseX = 4;
+                // case statement for scoring
                 switch (caseX)
                 {
                     case 1:
@@ -191,7 +195,7 @@ namespace Binaryfreestylepong
             if (ball.Bounds.IntersectsWith(leftWall.Bounds))
             {
                 goingright = goingright * -1;
-
+                //detects if hit left wall
                 caseY = 0;
 
                 if (ball.Location.Y <= 132 || ball.Location.Y >= 328)
@@ -202,6 +206,7 @@ namespace Binaryfreestylepong
                     caseY = 3;
                 else if (ball.Location.Y <= 244)
                     caseY = 4;
+                //case statement for scoring
                 switch (caseY)
                 {
                     case 1:
@@ -273,7 +278,7 @@ namespace Binaryfreestylepong
             if (ball.Bounds.IntersectsWith(topWall.Bounds))
             {
                 goingdown = goingdown * -1;
-                
+                //detects if hit top wall
                 caseX = 0;
 
                 if (ball.Location.X <= 132 || ball.Location.X >= 328)
@@ -284,6 +289,7 @@ namespace Binaryfreestylepong
                     caseX = 3;
                 else if (ball.Location.X <= 244)
                     caseX = 4;
+                //case statement for scoring
                 switch (caseX)
                 {
                     case 1:
@@ -358,6 +364,7 @@ namespace Binaryfreestylepong
                     goingright = goingright * -1;
                 else
                     goingdown = goingdown * -1;
+                //movement of ball if it hits player one
                 ball.Image = (Binaryfreestylepong.Properties.Resources.ballWhite);
                 ball.Location = new Point(ball.Location.X + ballspeed * goingright, ball.Location.Y + ballspeed * goingdown);
                 if (ball.Bounds.IntersectsWith(playerOne.Bounds))
@@ -365,6 +372,7 @@ namespace Binaryfreestylepong
                     goingdown = goingdown * -1;
                     goingright = goingright * -1;
                 }
+                //this helps with ball stickyness
                 Scoring = true;
 
             }
@@ -374,6 +382,7 @@ namespace Binaryfreestylepong
                     goingdown = goingdown * -1;
                 else
                     goingright = goingright * -1;
+                //detects if ball hit player two
                 ball.Image = (Binaryfreestylepong.Properties.Resources.ballBlack);
                 ball.Location = new Point(ball.Location.X + ballspeed * goingright, ball.Location.Y + ballspeed * goingdown);
                 if (ball.Bounds.IntersectsWith(playerTwo.Bounds))
@@ -381,6 +390,7 @@ namespace Binaryfreestylepong
                     goingright = goingright * -1;
                     goingdown = goingdown * -1;
                 }
+                //makes collision less sticky
                 Scoring = false;
             }
         }
@@ -399,7 +409,7 @@ namespace Binaryfreestylepong
            if (GoingLeftPlayer1)
                if (playerOne.Bounds.IntersectsWith(leftWall.Bounds) == false)
                playerOne.Location = new Point(playerOne.Location.X - 2, playerOne.Location.Y);
-
+            //collion for player one hitting a wall
            if (turnOne)
            {
                playerOne.Size = new Size(20, 116);
@@ -410,7 +420,7 @@ namespace Binaryfreestylepong
                playerOne.Size = new Size(116, 20);
                reverseRotateOne = false;
            }
-
+            //changes padle acording to rotation
            if (GoingUpPlayer2)
                if (playerTwo.Bounds.IntersectsWith(topWall.Bounds)== false)
                playerTwo.Location = new Point(playerTwo.Location.X, playerTwo.Location.Y - 2);
@@ -423,7 +433,7 @@ namespace Binaryfreestylepong
            if (GoingLeftPlayer2)
                if (playerTwo.Bounds.IntersectsWith(leftWall.Bounds) == false)
                playerTwo.Location = new Point(playerTwo.Location.X - 2, playerTwo.Location.Y);
-
+            //collision for player two hitting a wall
            if (turnTwo)
            {
                playerTwo.Size = new Size(20, 116);
@@ -466,7 +476,7 @@ namespace Binaryfreestylepong
                     turnTwo = false;
                 else
                     turnTwo = true;
-                
+            //detects if a key was pressed
         }
 
         private void Form1_KeyUp_1(object sender, KeyEventArgs e)
@@ -488,8 +498,17 @@ namespace Binaryfreestylepong
                 GoingLeftPlayer2 = false;
             if (e.KeyCode == Keys.Down)
                 GoingDownPlayer2 = false;
+            //detects if a key was let go of
             
         }
+
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+            ballTimer.Enabled = true;
+            playertimer.Enabled = true;
+            introBox.Visible = false;
+            //startup loop
+        } 
 
     }
 }
